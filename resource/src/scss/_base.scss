@@ -1,0 +1,36 @@
+#wks-footer{
+  margin-top: 0;
+}
+
+/*動画の最大幅を指定する*/
+.video-container{
+}
+
+/*動画の大きさを調整*/
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+/*動画を囲んでいるdiv目一杯に広げる*/
+.video iframe,
+.video object,
+.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wr-sp-contents__main {
+  .su-column,
+  .su-row{
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,20 @@
+/** ================================================
+
+  Assets Functions
+
+  Example:
+
+    background: #000000 image('btn/btn.png') no-repeat 0 0;
+
+================================================ */
+@function asset($base, $type, $path) {
+  @return url($base + $type + $path);
+}
+
+@function image($path, $base: $base-url) {
+  @return asset($base, 'images/', $path);
+}
+
+@function font($path, $base: $base-url) {
+  @return asset('', 'font/', $path);
+}

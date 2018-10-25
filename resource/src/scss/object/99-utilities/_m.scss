@@ -1,0 +1,49 @@
+@for $i from 1 through 100 {
+  #{$prefix-class-base}u-m-t-#{$i}{
+    margin-top: #{$i}px !important;
+  }
+}
+
+@for $i from 1 through 100 {
+  #{$prefix-class-base}u-m-b-#{$i}{
+    margin-bottom: #{$i}px !important;
+  }
+}
+
+@for $i from 1 through 100 {
+  #{$prefix-class-base}u-m-r-#{$i}{
+    margin-right: #{$i}px !important;
+  }
+}
+
+@for $i from 1 through 100 {
+  #{$prefix-class-base}u-m-l-#{$i}{
+    margin-right: #{$i}px !important;
+  }
+}
+
+@include respond(small){
+  @for $i from 1 through 100 {
+    #{$prefix-class-base}u-m-t-#{$i}-sp{
+      margin-top: #{$i}px !important;
+    }
+  }
+
+  @for $i from 1 through 100 {
+    #{$prefix-class-base}u-m-b-#{$i}-sp{
+      margin-bottom: #{$i}px !important;
+    }
+  }
+
+  @for $i from 1 through 100 {
+    #{$prefix-class-base}u-m-r-#{$i}-sp{
+      margin-right: #{$i}px !important;
+    }
+  }
+
+  @for $i from 1 through 100 {
+    #{$prefix-class-base}u-m-l-#{$i}-sp{
+      margin-right: #{$i}px !important;
+    }
+  }
+}

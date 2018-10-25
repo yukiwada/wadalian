@@ -1,0 +1,160 @@
+/** ================================================
+
+  Utility
+
+================================================ */
+@mixin clearfix{
+  *zoom: 1;
+  &:before, &:after{
+    display: table;
+    content: "";
+  }
+  &:after{
+    clear: both;
+  }
+}
+.clearfix{
+  @include clearfix;
+}
+
+@mixin placeholder(){
+  &:placeholder-shown {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    @content;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin placeholder-color($color) {
+  &:placeholder-shown {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color:$color;
+  }
+  &:-moz-placeholder {
+    color:$color;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color:$color;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color:$color;
+  }
+}
+
+@mixin crisp-edges(){
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+@mixin no-touch(){
+  html.no-touchevents &{
+    @content;
+  }
+}
+
+@mixin link-style(){
+  &, &:link, &:visited, &:active, &:hover, &:focus{
+    @content;
+  }
+}
+
+@mixin tel-link{
+  color: inherit;
+  pointer-events: none;
+  @include respond(small){
+    color:$color-key;
+    text-decoration: underline;
+    pointer-events: auto;
+  }
+
+  @include no-touch{
+
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+
+/** ================================================
+
+  Hover Animation
+
+================================================ */
+
+/** ================================================
+
+  Layout
+
+================================================ */
+
+
+/** ================================================
+
+  Transition Common Mixins
+
+  Example:
+
+    @include transition-common;
+    transition-property: opacity;
+    transition-duration: 0.4s;
+    transition-timing-function: $ease-out-quart;
+
+================================================ */
+@mixin transition-common($is-preserve-3d: true){
+  @if $is-preserve-3d{
+    transform-style: preserve-3d;
+  }
+  backface-visibility: hidden;
+}
+
+/** ================================================
+
+  Font
+
+================================================ */
+@mixin font-jp{
+  font-family: $font-jp;
+  font-weight: $font-jp-weight--demi-light;
+}
+
+@mixin font-en{
+  font-family: $font-en;
+  font-weight: $font-en-weight--regular;
+  letter-spacing: 0.08em;
+  @include font-smoothing();
+}
+
+
+/** ================================================
+
+  Responsive
+
+================================================ */
+@mixin respond($breakpoint: medium, $rule: max, $subtraction: false){
+  $breakpoint: map_get($breakpoints, $breakpoint);
+  @if $rule == max and $subtraction {
+    $breakpoint: $breakpoint - 1;
+  }
+  @media screen and (#{$rule}-width: $breakpoint) {
+    @content;
+  }
+}

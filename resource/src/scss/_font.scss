@@ -1,0 +1,62 @@
+/* ======================================================
+  日本語フォント（ゴシック） : Noto Sans Japanese
+  https://fonts.google.com/earlyaccess#Noto+Sans+Japanese
+  font-family: 'Noto Sans Japanese', sans-serif;
+====================================================== */
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+/* ======================================================
+  アイコンフォント
+====================================================== */
+@font-face {
+  font-family: 'wakasa';
+  src: font('wakasa.eot?#iefix') format('embedded-opentype'),
+       font('wakasa.woff') format('woff'),
+       font('wakasa.ttf') format('truetype'),
+       font('wakasa.svg#wakasa') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$icon-fonts: (
+  'i-facebook': '\e000',
+  'i-line': '\e001',
+  'i-twitter': '\e002',
+  'i-angle-down': '\e003',
+  'i-angle-left': '\e004',
+  'i-angle-right': '\e005',
+  'i-angle-up': '\e006',
+  'i-angle-down-thin': '\e007',
+  'i-angle-left-thin': '\e008',
+  'i-angle-right-thin': '\e009',
+  'i-angle-up-thin': '\e00a',
+  'i-hamburger': '\e00d',
+  'i-close': '\e00c'
+);
+
+@function icn-fonts($name){
+  @return map-get($icon-fonts, $name);
+}
+
+@mixin icn-font($content: null){
+  display: inline-block;
+  font-family: "wakasa";
+  font-size: inherit;
+  font-style: normal;
+  line-height: 1;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: map-get($icon-fonts, $content);
+}
+%icn-font{
+  @include icn-font;
+}
+
+
+@each $icon-name, $icon-code in $icon-fonts {
+  .anv-#{$icon-name}:before{
+    @extend %icn-font;
+    content: $icon-code;
+  }
+}

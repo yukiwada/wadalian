@@ -1,0 +1,50 @@
+#{$prefix-class-base}u-dv-pc{
+  @include respond('small'){
+    display: none !important;
+  }
+}
+
+#{$prefix-class-base}u-dv-pc-m{
+  @include respond('medium'){
+    display: none !important;
+  }
+}
+
+#{$prefix-class-base}u-dv-pc-l{
+  @include respond('large'){
+    display: none !important;
+  }
+}
+
+#{$prefix-class-base}u-dv-tb{
+  display: none !important;
+  @include respond('large'){
+    display: block !important;
+  }
+}
+
+#{$prefix-class-base}u-dv-sp-l{
+  display: none !important;
+  @include respond('medium'){
+    display: block !important;
+  }
+}
+
+#{$prefix-class-base}u-dv-sp{
+  display: none !important;
+  @include respond('small'){
+    display: block !important;
+  }
+}
+#{$prefix-class-base}u-dv-sp--in{
+  display: none !important;
+  @include respond('small'){
+    display: inline !important;
+  }
+}
+#{$prefix-class-base}u-dv-sp--inb{
+  display: none !important;
+  @include respond('small'){
+    display: inline-block !important;
+  }
+}

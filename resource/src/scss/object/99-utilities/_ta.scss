@@ -1,0 +1,25 @@
+#{$prefix-class-base}u-ta-l { text-align: left !important; }
+#{$prefix-class-base}u-ta-c { text-align: center !important; }
+#{$prefix-class-base}u-ta-r { text-align: right !important; }
+#{$prefix-class-base}u-ta-j { text-align: justify !important; }
+
+#{$prefix-class-base}u-ta-l--sp { 
+  @include respond(small){
+    text-align: left !important;
+  }
+}
+#{$prefix-class-base}u-ta-c--sp { 
+  @include respond(small){
+    text-align: center !important;
+  }
+}
+#{$prefix-class-base}u-ta-r--sp { 
+  @include respond(small){
+    text-align: right !important;
+  }
+}
+#{$prefix-class-base}u-ta-j--sp { 
+  @include respond(small){
+    text-align: justify !important;
+  }
+}

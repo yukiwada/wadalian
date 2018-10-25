@@ -1,0 +1,19 @@
+#{$prefix-class-base}u-va-sup { vertical-align: super !important; }
+#{$prefix-class-base}u-va-t { vertical-align: top !important; }
+#{$prefix-class-base}u-va-tt { vertical-align: text-top !important; }
+#{$prefix-class-base}u-va-m { vertical-align: middle !important; }
+#{$prefix-class-base}u-va-bl { vertical-align: baseline !important; }
+#{$prefix-class-base}u-va-b { vertical-align: bottom !important; }
+#{$prefix-class-base}u-va-tb { vertical-align: text-bottom !important; }
+#{$prefix-class-base}u-va-sub { vertical-align: sub !important; }
+
+@include respond(small){
+  #{$prefix-class-base}u-va-sup--sp { vertical-align: super !important; }
+  #{$prefix-class-base}u-va-t--sp { vertical-align: top !important; }
+  #{$prefix-class-base}u-va-tt--sp { vertical-align: text-top !important; }
+  #{$prefix-class-base}u-va-m--sp { vertical-align: middle !important; }
+  #{$prefix-class-base}u-va-bl--sp { vertical-align: baseline !important; }
+  #{$prefix-class-base}u-va-b--sp { vertical-align: bottom !important; }
+  #{$prefix-class-base}u-va-tb--sp { vertical-align: text-bottom !important; }
+  #{$prefix-class-base}u-va-sub--sp { vertical-align: sub !important; }
+}

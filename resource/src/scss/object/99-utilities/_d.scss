@@ -1,0 +1,43 @@
+#{$prefix-class-base}u-d-i { display: inline !important; }
+#{$prefix-class-base}u-d-n { display: none !important; }
+#{$prefix-class-base}u-d-b { display: block !important; }
+#{$prefix-class-base}u-d-ib { display: inline-block !important; }
+#{$prefix-class-base}u-d-fx { display: flex !important; }
+#{$prefix-class-base}u-d-ifx { display: inline-flex !important; }
+#{$prefix-class-base}u-d-tb { display: table !important; }
+#{$prefix-class-base}u-d-tb-100 {
+  display: table !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+#{$prefix-class-base}u-d-itb { display: inline-table !important; }
+#{$prefix-class-base}u-d-tbhg { display: table-header-group !important; }
+#{$prefix-class-base}u-d-tbfg { display: table-footer-group !important; }
+#{$prefix-class-base}u-d-tbrg { display: table-row-group !important; }
+#{$prefix-class-base}u-d-tbr { display: table-row !important; }
+#{$prefix-class-base}u-d-tbc { display: table-cell !important; }
+#{$prefix-class-base}u-d-li { display: list-item !important; }
+#{$prefix-class-base}u-d-ih { display: inherit !important; }
+
+@include respond(small){
+  #{$prefix-class-base}u-d-i--sp { display: inline !important; }
+  #{$prefix-class-base}u-d-n--sp { display: none !important; }
+  #{$prefix-class-base}u-d-b--sp { display: block !important; }
+  #{$prefix-class-base}u-d-ib--sp { display: inline-block !important; }
+  #{$prefix-class-base}u-d-fx--sp { display: flex !important; }
+  #{$prefix-class-base}u-d-ifx--sp { display: inline-flex !important; }
+  #{$prefix-class-base}u-d-tb--sp { display: table !important; }
+  #{$prefix-class-base}u-d-tb-100 {
+    display: table !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  #{$prefix-class-base}u-d-itb--sp { display: inline-table !important; }
+  #{$prefix-class-base}u-d-tbhg--sp { display: table-header-group !important; }
+  #{$prefix-class-base}u-d-tbfg--sp { display: table-footer-group !important; }
+  #{$prefix-class-base}u-d-tbrg--sp { display: table-row-group !important; }
+  #{$prefix-class-base}u-d-tbr--sp { display: table-row !important; }
+  #{$prefix-class-base}u-d-tbc--sp { display: table-cell !important; }
+  #{$prefix-class-base}u-d-li--sp { display: list-item !important; }
+  #{$prefix-class-base}u-d-ih--sp { display: inherit !important; }
+}
