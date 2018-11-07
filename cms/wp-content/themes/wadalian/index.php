@@ -10,8 +10,21 @@
       <?php if ( have_posts() ) : ?><!-- 記事があるかどうかを確認する -->
         <?php while ( have_posts() ) : the_post(); ?> <!-- 繰り返しを開始。記事がある場合は、その中から一つめを取得 -->
           <h2><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h2>
+          <?php if(has_post_thumbnail()){
+            the_post_thumbnail();
+          }else{?>
+            <p>画像がないよ</p>
+        <?php } ?>
           <?php the_time('Y年n月j日'); ?>              <!-- 日付を表示 -->
           <?php //the_category(); ?>                    <!-- カテゴリーを表示 -->
+          <?php
+            if(is_singular()){
+              the_content();
+            }else{
+              the_excerpt();
+            }
+          ?>
+
           <hr>
         <?php endwhile;?>
       <?php else: ?>
@@ -23,19 +36,3 @@
 </div>
 
 <?php get_footer(); ?>
-
-
-<style>
-  .class_matome h2 a{
-    color:#fff;
-    background-color: #aaa;
-    text-decoration: none;
-    font-size:1.2em;
-    padding:0.5em;
-    display:block;
-    text-align: center;
-
-  }
-
-
-</style>

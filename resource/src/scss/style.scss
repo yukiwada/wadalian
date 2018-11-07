@@ -1,4 +1,10 @@
-
+@import "_variables";
+@import "_functions";
+@import "_mixins";
+@import "_placeholders";
+@import "vendor/*";
+@import "_font";
+@import "_base";
 @import "object/99-utilities/*";
 @import "object/00-atoms/*";
 @import "object/01-molecules/*";
@@ -6,3 +12,44 @@
 @import "object/03-templates/*";
 @import "object/98-modules/*";
 @import "object/04-pages/*";
+
+img{
+  max-width:100%;
+  height: auto;
+}
+body {
+  background-color: #000;
+}
+
+.main {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  border-bottom: 2px solid #000;
+}
+
+.content {
+  text-align: left;
+}
+.copyright{
+  text-align: center;
+  margin: 50px 0;
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+}
+
+  .class_matome h2 a{
+    color:#fff;
+    background-color: #aaa;
+    text-decoration: none;
+    font-size:1.2em;
+    padding:0.5em;
+    display:block;
+    text-align: center;
+
+  }
