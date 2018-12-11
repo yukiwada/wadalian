@@ -23,7 +23,7 @@ const cleanCSS    = require('gulp-clean-css');//CSS圧縮
 //////変数指定//////
 //////////////////
 const BASE_PATH = "../cms";
-const THEME_BASE_PATH = BASE_PATH + "/wp-content/themes/wadalian/";
+const THEME_BASE_PATH = BASE_PATH + "/wp-content/themes/wadason/";
 
 const SOURCE_ROOT = "./src";
 const SOURCE_SCSS = SOURCE_ROOT + "/scss/style.scss";
@@ -44,7 +44,7 @@ var onError = function (err) {
   this.emit("end");
 };
 
-var proxy_Name = "wadalian.test";
+var proxy_Name = "wadason.test";
 var base_Dir_theme = BASE_PATH +"/wp-content/**";
 
 ///////////////
@@ -113,7 +113,7 @@ gulp.task("brwsync" ,function(){
 });
 
 
-gulp.task('watch',function(){
+gulp.task('default',function(){
   gulp.watch(WATCH_SCSS, ['sass']);
   gulp.watch(WATCH_JS, ['js']);
   gulp.watch(WATCH_IMG, ['imagesmin']);
