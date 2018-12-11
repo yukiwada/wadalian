@@ -1,6 +1,7 @@
 #resource/node_modules　は全てPUSH対象外
 
 resource/node_modules
+resource/account.txt
 
 # 「.AppleDouble」フォルダを除外
 
